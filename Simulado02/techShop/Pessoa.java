@@ -1,5 +1,6 @@
 package techShop;
 
+// Classe base que armazena os dados cadastrais genéricos de qualquer pessoa
 public class Pessoa{
     private String nome;
     private String cpf;
@@ -11,6 +12,7 @@ public class Pessoa{
         this.email = email;
     }
 
+    // Retorna a representação textual formatada
     @Override
     public String toString(){
         return "Nome: " + nome + " | CPF: " + cpf;

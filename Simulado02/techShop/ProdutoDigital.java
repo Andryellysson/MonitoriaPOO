@@ -1,5 +1,6 @@
 package techShop;
 
+// Item intangível enviado por download
 public class ProdutoDigital extends Produto {
     private int tamanhoMB;
 
@@ -8,6 +9,7 @@ public class ProdutoDigital extends Produto {
         this.tamanhoMB = tamanhoMB;
     }
 
+    // Concede 5% de desconto no preço base
     @Override
     public double calcularPrecoFinal() {
         return getPrecoBase() * 0.95;

@@ -1,5 +1,6 @@
 package techShop;
 
+// Representa o comprador e gerencia os pontos de fidelidade
 public class Cliente extends Pessoa {
     private String endereco;
     private int pontosFidelidade;
@@ -10,6 +11,7 @@ public class Cliente extends Pessoa {
         this.pontosFidelidade = 0;
     }
 
+    // Acumula pontos no programa de fidelidade
     public void adicionarPontos(int pontos) {
         this.pontosFidelidade += pontos;
     }

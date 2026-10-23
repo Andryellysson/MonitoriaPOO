@@ -1,5 +1,6 @@
 package techShop;
 
+// Cliente especial com percentual de desconto exclusivo
 public class ClienteVip extends Cliente {
     private double percentualDesconto;
 
@@ -8,6 +9,7 @@ public class ClienteVip extends Cliente {
         this.percentualDesconto = percentualDesconto;
     }
 
+    // Reaproveita a saída da superclasse adicionando o selo VIP
     @Override
     public String toString() {
         return super.toString() + " | VIP (" + (percentualDesconto * 100) + "%)";

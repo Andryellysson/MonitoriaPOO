@@ -1,5 +1,6 @@
 package techShop;
 
+// Pagamento por cartão com taxa de parcelamento e limite
 public class PagamentoCartao implements Pagamento {
     private int parcelas;
     private double limite;
@@ -9,6 +10,7 @@ public class PagamentoCartao implements Pagamento {
         this.limite = limite;
     }
 
+    // Cobra 8% acima de 3 parcelas e lança exceção se o valor exceder o limite
     @Override
     public double calcularValorFinal(double valor) {
         double valorFinal = (parcelas > 3) ? valor * 1.08 : valor;

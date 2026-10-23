@@ -1,5 +1,6 @@
 package techShop;
 
+// Representa os colaboradores da loja
 public class Funcionario extends Pessoa {
     private String matricula;
     private double salario;

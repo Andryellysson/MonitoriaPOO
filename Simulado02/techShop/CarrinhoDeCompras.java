@@ -3,6 +3,7 @@ package techShop;
 import java.util.ArrayList;
 import java.util.List;
 
+// Gerencia os itens selecionados e os cálculos de subtotal/frete
 public class CarrinhoDeCompras {
     private List<Produto> itens;
 
@@ -10,6 +11,7 @@ public class CarrinhoDeCompras {
         this.itens = new ArrayList<>();
     }
 
+    // Sobrecarga que valida a disponibilidade do estoque antes de adicionar
     public void adicionar(Produto p) throws EstoqueInsuficienteException {
         adicionar(p, 1);
     }
@@ -23,6 +25,7 @@ public class CarrinhoDeCompras {
         }
     }
 
+    // Soma o preço final de cada item do carrinho
     public double calcularTotal() {
         double soma = 0;
         for (Produto p : itens) {
@@ -31,6 +34,7 @@ public class CarrinhoDeCompras {
         return soma;
     }
 
+    // Calcula o frete apenas para produtos que implementam a interface Entregavel
     public double calcularFreteTotal(String cep) {
         double somaFrete = 0;
         for (Produto p : itens) {

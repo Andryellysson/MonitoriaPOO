@@ -1,5 +1,6 @@
 package techShop;
 
+// Exceção checada para indisponibilidade de quantidade em estoque
 public class EstoqueInsuficienteException extends Exception {
     public EstoqueInsuficienteException(String nome, int quantidadeDisponivel) {
         super("Estoque insuficiente para " + nome + ". Disponível: " + quantidadeDisponivel);

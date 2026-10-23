@@ -1,5 +1,6 @@
 package techShop;
 
+// Serviço de cobrança recorrente por período
 public class Assinatura extends Produto {
     private int meses;
 
@@ -8,6 +9,7 @@ public class Assinatura extends Produto {
         this.meses = meses;
     }
 
+    // Aplica 10% de desconto para planos a partir de 6 meses
     @Override
     public double calcularPrecoFinal() {
         double total = getPrecoBase() * meses;
